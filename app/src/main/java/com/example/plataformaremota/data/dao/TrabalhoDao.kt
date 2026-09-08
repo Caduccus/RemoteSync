@@ -8,9 +8,10 @@ import com.example.plataformaremota.data.entity.Trabalho
 @Dao
 interface TrabalhoDao {
 
+    // 1. Removido o 'suspend' para permitir chamadas síncronas dentro de Threads comuns
     @Insert
-    suspend fun inserir(trabalho: Trabalho)
+    fun inserirTrabalho(trabalho: Trabalho)
 
     @Query("SELECT * FROM trabalhos ORDER BY id DESC")
-    suspend fun listarTodos(): List<Trabalho>
+    fun listarTodos(): List<Trabalho>
 }

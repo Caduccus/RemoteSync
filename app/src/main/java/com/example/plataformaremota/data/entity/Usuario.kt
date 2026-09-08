@@ -1,19 +1,14 @@
 package com.example.plataformaremota.data.entity
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
+import java.io.Serializable
 
-@Entity(tableName = "usuarios")
+/**
+ * Classe simples de Usuário sem banco de dados.
+ */
 data class Usuario(
-
-    @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
-
     val nome: String,
-
     val email: String,
-
     val senha: String,
-
     val profissao: String
-)
+) : Serializable

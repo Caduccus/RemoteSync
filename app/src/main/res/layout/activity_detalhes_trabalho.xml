@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp">
+
+        <!-- 2. Cabeçalho com Grafismo Azul -->
+        <ImageView
+            android:id="@+id/imgHeaderDetalhe"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dc010e11171746e938cf3080fedb6237"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="Grafismo de cabeçalho" />
+
+        <!-- 1. Botão Voltar -->
+        <ImageButton
+            android:id="@+id/btnVoltar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- 3. Título da Vaga -->
+        <TextView
+            android:id="@+id/txtDetalheTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:text="Engenheiro de Software Senior"
+            android:textColor="#333333"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgHeaderDetalhe" />
+
+        <!-- 4. Categoria / Área -->
+
+        <!-- 5. Seção de Salário e Nível (Card) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardInfoVaga"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="339dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nível"
+                        android:textColor="#999999"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/txtDetalheNivel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sênior"
+                        android:textColor="#7B1FA2"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 6. Descrição Detalhada -->
+        <TextView
+            android:id="@+id/labelDescricao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Descrição do Trabalho"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/cardInfoVaga"
+            app:layout_constraintTop_toBottomOf="@+id/cardInfoVaga" />
+
+        <TextView
+            android:id="@+id/txtDetalheDescricao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="4dp"
+            android:text="Estamos em busca de uma pessoa desenvolvedora com vasta experiência em arquitetura mobile. Você será responsável por liderar tecnicamente o time de RemoteSync, garantindo a entrega de código limpo e escalável. \n\nRequisitos:\n- Kotlin Avançado\n- Experiência com Design UI/UX\n- Mentalidade focada em performance."
+            android:textColor="#666666"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/cardInfoVaga"
+            app:layout_constraintStart_toStartOf="@+id/labelDescricao"
+            app:layout_constraintTop_toBottomOf="@+id/labelDescricao" />
+
+        <!-- 7. Prazo Final -->
+        <TextView
+            android:id="@+id/txtDetalhePrazo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Inscrições até: 30 de Outubro de 2026"
+            android:textColor="#999999"
+            android:textSize="14sp"
+            android:fontStyle="italic"
+            app:layout_constraintStart_toStartOf="@+id/txtDetalheDescricao"
+            app:layout_constraintTop_toBottomOf="@+id/txtDetalheDescricao" />
+
+        <!-- 8. Botão Candidatar-se -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCandidatar"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="32dp"
+            android:text="CANDIDATAR-SE AGORA"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtDetalheDescricao"
+            app:layout_constraintStart_toStartOf="@+id/txtDetalhePrazo"
+            app:layout_constraintTop_toBottomOf="@+id/txtDetalhePrazo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

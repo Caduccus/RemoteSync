@@ -2,4 +2,14 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Cores da Marca -->
+    <color name="dark_blue_primary">#0D47A1</color>
+    <color name="dark_blue_variant">#002171</color>
+    <color name="dark_blue_accent">#2962FF</color>
+
+    <!-- Cores específicas para o Modo Escuro -->
+    <color name="background_dark">#121212</color>
+    <color name="surface_dark">#1E1E1E</color>
+    <color name="on_surface_dark">#DEFFFFFF</color>
 </resources>
